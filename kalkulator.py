@@ -48,7 +48,7 @@ def kalkulator():
                     print("Hasil:", math.sqrt(a))
 
             elif pilihan == '7':
-                a = float(input("Masukkan angka (>0): "))
+                a = float(input("Masukkan angka (>0): ")
                 if a <= 0:
                     print("Error: log hanya untuk angka > 0!")
                 else:
