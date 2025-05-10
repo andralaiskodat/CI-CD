@@ -66,6 +66,6 @@ def kalkulator():
 
         except ValueError:
             print("Error: Input tidak valid!")
-
+# andra laiskodat 4665
 # Jalankan program
 kalkulator()
