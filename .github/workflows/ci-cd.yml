@@ -23,5 +23,7 @@ jobs:
 
     - name: Run Program (optional)
       run: |
+        name: Run Program (optional)
+        run: timeout 10s ./kalkulator
         echo "Testing program output:"
         echo "2 3" | ./kalkulator || echo "Manual test failed (this is just a build check)"
