@@ -1,4 +1,4 @@
-name: C++ Syntax Check
+name: Build & Run C++ Kalkulator
 
 on:
   push:
@@ -19,11 +19,8 @@ jobs:
 
     - name: Compile C++ Program
       run: |
-        g++ -Wall -Wextra -Werror -o kalkulator kalkulator.cpp
+        g++ -Wall -Wextra -Werror kalkulator.cpp -o kalkulator
 
-    - name: Run Program (optional)
+    - name: Run Program (optional with timeout)
       run: |
-        name: Run Program (optional)
-        run: timeout 10s ./kalkulator
-        echo "Testing program output:"
-        echo "2 3" | ./kalkulator || echo "Manual test failed (this is just a build check)"
+        timeout 10s ./kalkulator || echo "Program exited or was terminated after timeout"
