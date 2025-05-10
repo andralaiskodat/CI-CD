@@ -27,7 +27,7 @@ jobs:
     - name: Jalankan Program kalkulator.py
       run: |
         python kalkulator.py
-name: CI - Kalkulator Python
+name: CI - kalkulator Python
 
 on:
   push:
