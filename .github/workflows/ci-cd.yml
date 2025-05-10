@@ -1,0 +1,27 @@
+name: C++ Syntax Check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Install g++
+      run: sudo apt update && sudo apt install -y g++
+
+    - name: Compile C++ Program
+      run: |
+        g++ -Wall -Wextra -Werror -o kalkulator kalkulator.cpp
+
+    - name: Run Program (optional)
+      run: |
+        echo "Testing program output:"
+        echo "2 3" | ./kalkulator || echo "Manual test failed (this is just a build check)"
