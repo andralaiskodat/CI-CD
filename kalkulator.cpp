@@ -24,7 +24,7 @@ void kalkulator() {
         cout << "Pilih operasi (0-7): ";
         cin >> pilihan;
 
-        switch (pilihan) {
+        switch (pilihan) 
             case 1:
                 cout << "Masukkan dua angka: ";
                 cin >> a >> b;
