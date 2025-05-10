@@ -1,4 +1,4 @@
-name: Build & Run C++ Kalkulator
+name: C++ CI Pipeline
 
 on:
   push:
@@ -7,20 +7,24 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  build-and-run:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
+    # 1. Ambil seluruh isi repository
+    - name: Checkout Source Code
       uses: actions/checkout@v3
 
-    - name: Install g++
+    # 2. Install dependencies (g++)
+    - name: Install Dependencies
       run: sudo apt update && sudo apt install -y g++
 
-    - name: Compile C++ Program
+    # 3. Compile program
+    - name: Compile Code
       run: |
         g++ -Wall -Wextra -Werror kalkulator.cpp -o kalkulator
 
-    - name: Run Program (optional with timeout)
+    # 4. Jalankan program (maksimal 10 detik)
+    - name: Run the Program
       run: |
-        timeout 10s ./kalkulator || echo "Program exited or was terminated after timeout"
+        timeout 10s ./kalkulator || echo "Program stopped or timed out."
