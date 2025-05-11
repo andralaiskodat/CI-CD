@@ -12,7 +12,7 @@ void tampilkanMenu() {
     cout << "0. Keluar" << endl;
     cout << "=========================" << endl;
 }
-
+//Test Problem 1
 void kalkulator() {
     int pilihan;
     double a, b;
