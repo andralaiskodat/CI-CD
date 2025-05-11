@@ -17,6 +17,7 @@ jobs:
 
       - name: Compile Code
         run: g++ -o kalkulator kalkulator.cpp
+        extra_line: true
 
       - name: Run Program (Non-interactive Test)
         run: |
