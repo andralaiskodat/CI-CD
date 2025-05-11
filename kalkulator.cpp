@@ -13,7 +13,7 @@ void tampilkanMenu() {
     cout << "=========================" << endl;
 }
 
-void kalkulator() 
+void kalkulator() {
     int pilihan;
     double a, b;
 
