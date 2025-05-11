@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cmath>    // Untuk pow dan sqrt
+
 using namespace std;
 
 void tampilkanMenu() {
@@ -9,8 +9,6 @@ void tampilkanMenu() {
     cout << "3. Perkalian (*)" << endl;
     cout << "4. Pembagian (/)" << endl;
     cout << "5. Modulus (%)" << endl;
-    cout << "6. Pangkat (x^y)" << endl;
-    cout << "7. Akar Kuadrat (√x)" << endl;
     cout << "0. Keluar" << endl;
     cout << "=========================" << endl;
 }
@@ -56,19 +54,6 @@ void kalkulator() {
                     cout << "Error: Modulus dengan nol!" << endl;
                 else
                     cout << "Hasil: " << x % y << endl;
-                break;
-            case 6:
-                cout << "Masukkan basis dan eksponen: ";
-                cin >> a >> b;
-                cout << "Hasil: " << pow(a, b) << endl;
-                break;
-            case 7:
-                cout << "Masukkan angka: ";
-                cin >> a;
-                if (a < 0)
-                    cout << "Error: Tidak bisa menghitung akar dari bilangan negatif!" << endl;
-                else
-                    cout << "Hasil: " << sqrt(a) << endl;
                 break;
             case 0:
                 cout << "Keluar dari program." << endl;
