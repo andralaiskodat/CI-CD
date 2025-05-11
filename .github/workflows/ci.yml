@@ -1,0 +1,23 @@
+name: C++ CI Pipeline
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: sudo apt update && sudo apt install -y g++
+
+      - name: Compile Code
+        run: g++ -o kalkulator kalkulator.cpp
+
+      - name: Run Program (Non-interactive Test)
+        run: |
+          echo -e "1\n10\n5\n0" | ./kalkulator
