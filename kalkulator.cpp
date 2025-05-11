@@ -3,7 +3,7 @@
 using namespace std;
 
 void tampilkanMenu() {
-    cout << "==== KALKULATOR C++ ====" << endl;
+    cout << "==== KALKULATOR C++ Tim B ====" << endl;
     cout << "1. Penjumlahan (+)" << endl;
     cout << "2. Pengurangan (-)" << endl;
     cout << "3. Perkalian (*)" << endl;
